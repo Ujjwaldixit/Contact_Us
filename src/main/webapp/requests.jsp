@@ -9,6 +9,25 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
+        <style>
+            body{
+                margin:0;
+                padding:5em;
+                text-align: center;
+            }
+            button{
+                padding:10px;
+                font-size: 20px;
+                margin:10px;
+                color:white;
+                background-color:#77ccff; 
+                border: none;
+                box-shadow: 2px 5px gray;
+            }
+            table{
+                font-size:20px;
+            }
+        </style>
     </head>
     <body>
         <%
@@ -17,7 +36,7 @@
             }
         %>
         <form action="ActiveAndArchive" method="post">
-            <table border="1">
+            <table border ="1" align="center">
                 <th colspan="5">Active</th>
                 <tr>
                     <td></td>
@@ -52,12 +71,11 @@
         </form>
 
         <br>
-        <br>
         <%
             if (count < contacts.size()) {
         %>
-        <form action="activeAndArchive" method="post">
-            <table border="1">
+        <form action="ActiveAndArchive" method="post">
+            <table border="1" align="center">
                 <th colspan="5">Archive</th>
                 <tr>
                     <td></td>

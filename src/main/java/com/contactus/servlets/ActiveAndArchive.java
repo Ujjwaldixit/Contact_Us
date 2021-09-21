@@ -9,6 +9,7 @@ import com.contactus.connection.ConnectionProvider;
 import com.contactus.dao.ContactsDao;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.Arrays;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -40,24 +41,27 @@ public class ActiveAndArchive extends HttpServlet {
             out.println("<title>Servlet ActiveAndArchive</title>");
             out.println("</head>");
             out.println("<body>");
-            
+
             ContactsDao contact = new ContactsDao(ConnectionProvider.getConnection());
             String buttonClicked = request.getParameter("button");
             String emails[] = request.getParameterValues("check");
-
-            boolean isUpdate = false;
-            for (String email : emails) {
-                if (buttonClicked.equals("active")) {
-                    isUpdate = contact.updateArchiveStatus(email, false);
-                } else if (buttonClicked.equals("archive")) {
-                    isUpdate = contact.updateArchiveStatus(email, true);
-                }
-            }
-
-            if (isUpdate) {
+            if (Arrays.toString(emails).equals("null")) {
                 response.sendRedirect("requests");
             } else {
-                response.sendRedirect("error.jsp");
+                boolean isUpdate = false;
+                for (String email : emails) {
+                    if (buttonClicked.equals("active")) {
+                        isUpdate = contact.updateArchiveStatus(email, false);
+                    } else if (buttonClicked.equals("archive")) {
+                        isUpdate = contact.updateArchiveStatus(email, true);
+                    }
+                }
+
+                if (isUpdate) {
+                    response.sendRedirect("requests");
+                } else {
+                    response.sendRedirect("error.jsp");
+                }
             }
             out.println("</body>");
             out.println("</html>");
