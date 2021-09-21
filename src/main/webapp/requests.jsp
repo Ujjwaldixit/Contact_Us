@@ -1,8 +1,3 @@
-<%-- 
-    Document   : requests
-    Created on : 21-Sep-2021, 10:17:41 pm
-    Author     : ASUS
---%>
 
 <%@page import="java.util.ArrayList"%>
 <%@page import="com.contactus.dao.ContactsDao"%>

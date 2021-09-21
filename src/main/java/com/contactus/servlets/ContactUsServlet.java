@@ -55,13 +55,16 @@ public class ContactUsServlet extends HttpServlet {
             if (check) {
                 out.println("<script type=\"text/javascript\">");
                 out.println("alert('Succesfully Submitted');");
+                out.println("location.href = 'contactUs.html';");
                 out.println("</script>");
+      
             } else {
                 out.println("<script type=\"text/javascript\">");
                 out.println("alert('Retry');");
+                out.println("location.href = 'contactUs.html';");
                 out.println("</script>");
             }
-
+            
             out.println("</body>");
             out.println("</html>");
         }
