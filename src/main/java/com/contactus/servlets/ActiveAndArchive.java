@@ -46,7 +46,10 @@ public class ActiveAndArchive extends HttpServlet {
             String buttonClicked = request.getParameter("button");
             String emails[] = request.getParameterValues("check");
             if (Arrays.toString(emails).equals("null")) {
-                response.sendRedirect("requests");
+                out.println("<script type=\"text/javascript\">");
+                out.println("alert('No row Selected');");
+                out.println("location.href = 'requests';");
+                out.println("</script>");
             } else {
                 boolean isUpdate = false;
                 for (String email : emails) {

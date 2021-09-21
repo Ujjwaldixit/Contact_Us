@@ -8,7 +8,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Request Page</title>
         <style>
             body{
                 margin:0;
@@ -19,8 +19,8 @@
                 padding:10px;
                 font-size: 20px;
                 margin:10px;
-                color:white;
-                background-color:#77ccff; 
+                color:gray;
+                background-color:lightgrey; 
                 border: none;
                 box-shadow: 2px 5px gray;
             }

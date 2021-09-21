@@ -1,0 +1,53 @@
+body{
+    margin:0;
+    padding:0;
+    font-family:cursive;
+}
+.form {
+    text-align: center;
+    width: 382px;  
+    overflow: hidden;  
+    margin:5% 35%;
+    background:lightgrey;  
+}
+a{
+    text-decoration: none;
+}
+a:visited 
+{ 
+    text-decoration: none;
+    color:white; 
+}
+label{  
+    color: black;  
+    font-size:30px;  
+}
+input{
+    width: 70%;
+    height:40px;
+}
+
+button{
+    border-radius: 20%;
+    margin:30px;
+    font-size: 30px;
+}
+.navbar{
+    background-color: black; 
+    width:100%;
+    height:auto;
+    font-size:40px;
+    float: right;
+    margin-bottom: 10px;
+    color:white;
+}
+.form-header {
+    background-color:black;
+    color: white;
+}
+#login-button{
+    float: right;
+    background-color:gray;
+    padding:3px;
+    box-shadow:2px 4px lightgray; 
+}
