@@ -6,6 +6,7 @@
 package com.contactus.dao;
 
 
+import com.contactus.entity.Admin;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
