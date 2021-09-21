@@ -1,9 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
-    <welcome-file-list>  
-        <welcome-file>contactUs.html</welcome-file>  
-    </welcome-file-list>  
-    
+    <welcome-file-list>
+        <welcome-file>contactUs.html</welcome-file>
+    </welcome-file-list>
+    <servlet>
+        <servlet-name>requests</servlet-name>
+        <jsp-file>/requests.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>requests</servlet-name>
+        <url-pattern>/requests</url-pattern>
+    </servlet-mapping>
     <servlet>
         <servlet-name>Login</servlet-name>
         <servlet-class>com.contactus.servlets.Login</servlet-class>
@@ -12,6 +19,10 @@
         <servlet-name>ContactUsServlet</servlet-name>
         <servlet-class>com.contactus.servlets.ContactUsServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ActiveAndArchive</servlet-name>
+        <servlet-class>com.contactus.servlets.ActiveAndArchive</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Login</servlet-name>
         <url-pattern>/Login</url-pattern>
@@ -19,6 +30,10 @@
     <servlet-mapping>
         <servlet-name>ContactUsServlet</servlet-name>
         <url-pattern>/ContactUsServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ActiveAndArchive</servlet-name>
+        <url-pattern>/ActiveAndArchive</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
