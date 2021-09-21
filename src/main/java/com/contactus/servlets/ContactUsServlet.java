@@ -45,7 +45,6 @@ public class ContactUsServlet extends HttpServlet {
             String email = request.getParameter("email");
             String message = request.getParameter("message");
 
-            out.print(fullName + " " + email + " " + message);
             Contact contact = new Contact();
             contact.setFullName(fullName);
             contact.setEmail(email);
