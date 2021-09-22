@@ -69,7 +69,6 @@
             </table>
             <button type="submit" name="button" value="archive">ARCHIVE</button>
         </form>
-
         <br>
         <%
             if (count < contacts.size()) {
